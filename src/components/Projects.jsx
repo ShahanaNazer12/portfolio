@@ -65,7 +65,7 @@ function Projects() {
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold mb-12 text-center text-black dark:text-white"
+          className="text-3xl font-bold mb-12 text-center text-black dark:text-white "
         >
           Projects
         </motion.h2>
@@ -75,7 +75,7 @@ function Projects() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 "
         >
           {projects.map((p, i) => (
             <motion.div
@@ -89,6 +89,7 @@ function Projects() {
                 transition duration-300
                 border border-transparent
                 hover:border-purple-500/30
+                cursor-pointer
               "
             >
               {/* Glow effect */}

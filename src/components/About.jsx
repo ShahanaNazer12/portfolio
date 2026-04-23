@@ -25,7 +25,7 @@ function About() {
             whileInView={{ opacity: 1, x: 0 }}
           >
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              I'm a <span className="text-purple-500 font-semibold">Full Stack Developer</span> 
+              I'm a <span className="text-purple-500 font-semibold">Full Stack Developer </span> 
               with hands-on experience building scalable and user-friendly web applications 
               using <span className="font-medium">React.js</span>,{" "}
               <span className="font-medium">Node.js</span>, and{" "}
@@ -33,8 +33,8 @@ function About() {
             </p>
 
             <p className="mt-4 text-gray-700 dark:text-gray-300">
-              I work across both <span className="text-purple-500 font-medium">frontend</span> 
-              and <span className="text-purple-500 font-medium">backend</span>, focusing on 
+              I work across both <span className="text-purple-500 font-medium"> frontend </span> 
+              and <span className="text-purple-500 font-medium"> backend </span>, focusing on 
               clean architecture, REST API integration, and smooth user experiences. 
               I enjoy building complete end-to-end applications and solving real-world problems.
             </p>
@@ -44,7 +44,7 @@ function About() {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="space-y-5"
+            className="space-y-5 cursor-pointer"
           >
             {/* Card */}
             {[
