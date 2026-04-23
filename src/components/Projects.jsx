@@ -6,29 +6,29 @@ const projects = [
     title: "Hospital Management System",
     desc: "Developed a hospital management system with React.js, integrating Node.js and MongoDB for efficient data handling and seamless backend communication.",
     tech: ["React", "Node.js", "MongoDB"],
-    github: "#",
-    live: "#",
+    // github: "#",
+    // live: "#",
   },
   {
     title: "CleanCity360",
     desc: "Built a MERN-based garbage management system with role-based access, enabling worker assignment and real-time request tracking.",
     tech: ["MERN", "JWT", "REST API","MongoDB"],
-    github: "https://github.com/ShahanaNazer12/CleanCity360",
-    live: "https://cleancity360-frontend.vercel.app/",
+    // github: "https://github.com/ShahanaNazer12/CleanCity360",
+    // live: "https://cleancity360-frontend.vercel.app/",
   },
   {
     title: "Photography Hub",
     desc: "Developed a full-stack photography platform using Python with booking, scheduling, and role-based authentication features.",
     tech: ["Python", "HTML", "CSS"],
-    github: "https://github.com/ShahanaNazer12/photography-hub",
-    live: "#",
+    // github: "https://github.com/ShahanaNazer12/photography-hub",
+    // live: "#",
   },
   {
     title: "Medizone",
     desc: "Created a web application for generic medicine awareness with location-based services, secure authentication, and appointment booking functionality.",
     tech: ["Python", "HTML", "CSS"],
-    github: "#",
-    live: "#",
+    // github: "#",
+    // live: "#",
   },
 ]
 
@@ -85,7 +85,7 @@ function Projects() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-sm hover:text-purple-500 transition"
               >
-                <FaGithub /> Code
+                {/* <FaGithub /> Code */}
               </a>
 
               <a
@@ -94,7 +94,7 @@ function Projects() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-sm hover:text-purple-500 transition"
               >
-                <FaExternalLinkAlt /> Live
+                {/* <FaExternalLinkAlt /> Live */}
               </a>
             </div>
           </motion.div>

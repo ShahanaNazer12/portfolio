@@ -26,8 +26,8 @@ function About() {
             whileInView={{ opacity: 1, x: 0 }}
           >
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              I'm a <span className="text-purple-500 font-medium">Full Stack Developer</span> 
-              with hands-on experience building responsive and user-friendly web applications 
+              I'm a <span className="text-purple-500 font-medium">Full Stack Developer </span> 
+               with hands-on experience building responsive and user-friendly web applications 
               using <span className="font-medium">React.js</span>,{" "}
               <span className="font-medium">Node.js</span>, and{" "}
               <span className="font-medium">MongoDB</span>.

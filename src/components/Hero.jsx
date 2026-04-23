@@ -2,7 +2,6 @@ import { motion } from "framer-motion"
 import { Link } from "react-scroll"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
-
 const container = {
   hidden: {},
   show: {
@@ -26,17 +25,32 @@ function Hero() {
     <section
       id="home"
       className="
-      min-h-screen flex flex-col justify-center items-center text-center px-6
-      bg-gray-100 text-black 
-      dark:bg-gradient-to-br dark:from-gray-900 dark:via-black dark:to-gray-800 
-      dark:text-white
+      relative min-h-screen flex flex-col justify-center items-center text-center px-6
+      bg-gradient-to-br from-gray-100 via-white to-gray-200
+      dark:from-gray-900 dark:via-black dark:to-gray-800
+      overflow-hidden
       "
     >
+      {/* Soft gradient overlay (instead of dots) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-200/20 via-transparent to-pink-200/20 dark:from-purple-900/20 dark:to-pink-900/20"></div>
+
+      {/* Animated Background Glow */}
+      <motion.div
+        animate={{ y: [0, -30, 0] }}
+        transition={{ duration: 6, repeat: Infinity }}
+        className="absolute w-[500px] h-[500px] bg-purple-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"
+      />
+      <motion.div
+        animate={{ y: [0, 30, 0] }}
+        transition={{ duration: 7, repeat: Infinity }}
+        className="absolute w-[400px] h-[400px] bg-pink-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"
+      />
+
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex flex-col items-center"
+        className="flex flex-col items-center relative z-10"
       >
         {/* Heading */}
         <motion.h1
@@ -44,7 +58,7 @@ function Hero() {
           className="text-4xl md:text-6xl font-bold leading-tight"
         >
           Hi, I'm{" "}
-          <span className="text-purple-500 dark:text-purple-400">
+          <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 bg-clip-text text-transparent">
             Shahana Sherin K
           </span>
         </motion.h1>
@@ -68,9 +82,13 @@ function Hero() {
             smooth={true}
             duration={500}
             className="
-              px-6 py-2 bg-purple-600 hover:bg-purple-700 
-              text-white rounded cursor-pointer
+              px-6 py-3 rounded-md
+              bg-gradient-to-r from-purple-600 to-pink-500
+              text-white font-medium
+              shadow-lg shadow-purple-500/30
+              hover:shadow-xl hover:shadow-purple-500/50
               transition duration-300 hover:scale-105
+              cursor-pointer
             "
           >
             View Projects
@@ -80,8 +98,10 @@ function Hero() {
             href="/resume.pdf"
             download
             className="
-              px-6 py-2 border border-gray-400 dark:border-gray-600 
-              rounded hover:bg-gray-200 dark:hover:bg-gray-700
+              px-6 py-3 rounded-md
+              border border-gray-400 dark:border-gray-600
+              backdrop-blur-sm
+              hover:bg-gray-200 dark:hover:bg-gray-700
               transition duration-300 hover:scale-105
             "
           >
@@ -89,10 +109,10 @@ function Hero() {
           </a>
         </motion.div>
 
-        {/*  Icons */}
+        {/* Icons */}
         <motion.div
           variants={item}
-          className="flex gap-6 mt-8 text-2xl"
+          className="flex gap-6 mt-10 text-2xl"
         >
           <a
             href="https://github.com/ShahanaNazer12"
@@ -107,10 +127,19 @@ function Hero() {
             href="https://www.linkedin.com/in/shahana-nazer-529216279"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-500 transition duration-300 hover:scale-110"
+            className="hover:text-pink-500 transition duration-300 hover:scale-110"
           >
             <FaLinkedin />
           </a>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="mt-12 text-gray-500 dark:text-gray-400 text-sm"
+        >
+          ↓ Scroll Down
         </motion.div>
       </motion.div>
     </section>
